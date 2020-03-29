@@ -216,3 +216,7 @@ func is(t ErrType, e *Err) bool {
 	}
 	return false
 }
+
+func SameErrorMessage(want, got error) bool {
+	return (want == nil && got == nil) || (want != nil && got != nil && want.Error() == got.Error())
+}

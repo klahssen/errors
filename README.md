@@ -9,13 +9,14 @@
 
 ## <a name="pkg-imports">Imported Packages</a>
 
-- google.golang.org/grpc/codes
+- [google.golang.org/grpc/codes](https://godoc.org/google.golang.org/grpc/codes)
 
 ## <a name="pkg-index">Index</a>
 * [func FirstError(t ErrType, op string, causes ...error) error](#FirstError)
 * [func GetGRPCCode(err error) codes.Code](#GetGRPCCode)
 * [func Is(t ErrType, err error) bool](#Is)
 * [func New(t ErrType, op string, cause error) error](#New)
+* [func SameErrorMessage(want, got error) bool](#SameErrorMessage)
 * [type Err](#Err)
   * [func (e \*Err) Error() string](#Err.Error)
   * [func (e \*Err) Origin() error](#Err.Origin)
@@ -52,6 +53,11 @@ Is checks if err is of error type t
 func New(t ErrType, op string, cause error) error
 ```
 New constructs a new error
+
+## <a name="SameErrorMessage">func</a> [SameErrorMessage](./errors.go#L220)
+``` go
+func SameErrorMessage(want, got error) bool
+```
 
 ## <a name="Err">type</a> [Err](./errors.go#L70-L74)
 ``` go
